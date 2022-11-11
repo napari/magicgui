@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Error 404 :(</title>
+
+    <script>
+        window.onload = function () {
+            const destination = window.location.href;
+            if (window.location.href.includes("napari.org/magicgui")) {
+                const redirectLocation = window.location.href.replace(
+                    "napari.org/magicgui",
+                    "pyapp-kit.github.io/magicgui"
+                );
+                document.getElementById("body").innerHTML = "magicgui has moved to the pyapp-kit organization.<br/><br/>Redirecting to " + redirectLocation + " ...";
+                window.location.href = redirectLocation;
+            }
+        }
+    </script>
+</head>
+
+<body id="body" style="text-align: center">
+    Page not found
+</body>
+
+</html>
